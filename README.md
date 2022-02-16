@@ -13,3 +13,13 @@ $ npm init -y
 ```bash
 $ npm i -D jest
 ```
+>Create jest.config.js
+```bash
+npx-jest --init
+```
+>Yes   
+>No typescript   
+>node   
+>Yes reportes de coverage \(v8 / babel)
+>Yes limpiar mocks
+
