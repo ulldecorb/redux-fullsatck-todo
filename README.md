@@ -3,6 +3,7 @@ Javascript unit test cheat sheet
 ## Table of Content
 [Jest](#jest)
   * [Install](#install)
+[Sources](#sources)
 ## JEST
 ### Install
 >Create package.json
@@ -29,3 +30,10 @@ npx jest --init
 $ npm i -D jest ts-jest @types/jest
 $ npx ts-jest config:init
 ```
+
+
+
+## Sources
+
+[Carlos Azaustre's video tutorial](https://www.youtube.com/watch?v=I27ZJU2_-Og)   
+[Bromix's article about typescript install](https://itnext.io/testing-with-jest-in-typescript-cc1cd0095421)
