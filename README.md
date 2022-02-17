@@ -9,17 +9,23 @@ Javascript unit test cheat sheet
 ```bash
 $ npm init -y
 ```
->Install Jest library
+>Install Jest library for javascript project
 ```bash
 $ npm i -D jest
 ```
 >Create jest.config.js
 ```bash
-npx-jest --init
+npx jest --init
 ```
->Yes   
->No typescript   
->node   
->Yes reportes de coverage \(v8 / babel)
->Yes limpiar mocks
-
+```bash
+? Would you like to use Jest when running "test" script in "package.json"? » (y/N) yes   
+? Would you like to use Typescript for the configuration file? » (y/N)  yes
+? Choose the test environment that will be used for testing » node / jsdom (browser-like)
+? Do you want Jest to add coverage reports? » (y/N) yes  »  v8 / babel
+? Automatically clear mock calls, instances and results before every test? » (y/N) yes
+```
+>Install Jest library for typescript project
+```bash
+$ npm i -D jest ts-jest @types/jest
+$ npx ts-jest config:init
+```
