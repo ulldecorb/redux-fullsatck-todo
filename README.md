@@ -68,12 +68,17 @@ describe('component', () => {
       firstProp: 'prop value',
       secondProp: true
     }
+    const mockHandler = jest.fn();
     
     const component = render(<Component props={ mockProps } />);
-        
-    component.getByText('This is a test);
+    const button = component.getByTestId(button')    
+    component.getByText('This is a test); // This syntax run a test
     
-    expect(component.container).toHaveTextContent(/text/i)
+    fireEvent.click(button);
+    
+    expect(component.container).toHaveTextContent(/text/i);  // this syntax run a test
+    expect(mockHandler.mock.calls).toHaveLenght(1);
+    expect(mockHandler).toHaveBeenCalledTimes(1);
   }
 }
 ```   
