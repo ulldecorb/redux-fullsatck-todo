@@ -1,4 +1,4 @@
-# test-cheat-test
+# test-cheat-sheet
 Javascript unit test cheat sheet
 ## Table of Content
 [Unit Test](#unit-test)
