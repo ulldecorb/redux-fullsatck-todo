@@ -4,6 +4,7 @@ import {
   signOut
 } from 'firebase/auth';
 import auth from '../../firebase-congif';
+import './header.css';
 
 export const Header = function Header({ user }) {
   const logout = async () => {
@@ -11,7 +12,7 @@ export const Header = function Header({ user }) {
   };
   return (
     <section className="header">
-      <h1>App</h1>
+      <h1 className="header__title">App</h1>
       <div className="header__login">
         <h4> User Logged In: </h4>
         {user?.mail}
