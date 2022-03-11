@@ -4,6 +4,7 @@ import {
   onAuthStateChanged
 } from 'firebase/auth';
 import auth from '../../firebase-congif';
+import './register.css';
 
 export const RegisterUser = function LoginError() {
   const [registerEmail, setRegisterEmail] = useState('');
@@ -29,7 +30,7 @@ export const RegisterUser = function LoginError() {
   };
 
   return (
-    <section className="login-error">
+    <section className="register-user">
       <div>
         <h3>Register User</h3>
         <input
