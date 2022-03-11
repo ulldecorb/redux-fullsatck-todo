@@ -1,6 +1,7 @@
 export default {
   apiKey: 'AIzaSyDQEzCZpQh_g6-Ew80dKmWdILiu5buag10',
   authDomain: 'fir-react-auth-97d79.firebaseapp.com',
+  databaseURL: 'https://fir-react-auth-97d79-default-rtdb.europe-west1.firebasedatabase.app',
   projectId: 'fir-react-auth-97d79',
   storageBucket: 'fir-react-auth-97d79.appspot.com',
   messagingSenderId: '1527259339',
