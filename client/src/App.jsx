@@ -1,101 +1,40 @@
-import React, { useState } from 'react';
+import React, { useState, Suspense } from 'react';
 import {
-  createUserWithEmailAndPassword,
-  signInWithEmailAndPassword,
-  onAuthStateChanged,
-  signOut
+  BrowserRouter as Router,
+  Route,
+  Routes
+  // Navigate
+} from 'react-router-dom';
+import {
+  onAuthStateChanged
 } from 'firebase/auth';
-
 import auth from './firebase-congif';
+import { Header } from './components/Header';
+import { Dashboard } from './components/Dashboard';
+import { LoginUser } from './components/LoginUser';
+import { RegisterUser } from './components/RegisterUser';
 
 export const App = function App() {
-  const [registerEmail, setRegisterEmail] = useState('');
-  const [registerPassword, setRegisterPassword] = useState('');
-  const [loginEmail, setLoginEmail] = useState('');
-  const [loginPassword, setLoginPassword] = useState('');
-
   const [user, setUser] = useState({});
+
+  const loadingMessage = () => 'Code is lava...';
 
   onAuthStateChanged(auth, (currentUser) => {
     setUser(currentUser);
   });
 
-  const register = async () => {
-    try {
-      setUser(await createUserWithEmailAndPassword(
-        auth,
-        registerEmail,
-        registerPassword
-      ));
-      console.log(user);
-    } catch (error) {
-      console.log(error.message);
-    }
-  };
-
-  const login = async () => {
-    try {
-      setUser(await signInWithEmailAndPassword(
-        auth,
-        loginEmail,
-        loginPassword
-      ));
-      console.log(user);
-    } catch (error) {
-      console.log(error.message);
-    }
-  };
-
-  const logout = async () => {
-    await signOut(auth);
-  };
-
   return (
     <div className="App">
-      <div>
-        <h3> Register User </h3>
-        <input
-          type="text"
-          placeholder="Email..."
-          onChange={(event) => {
-            setRegisterEmail(event.target.value);
-          }}
-        />
-        <input
-          type="password"
-          placeholder="Password..."
-          onChange={(event) => {
-            setRegisterPassword(event.target.value);
-          }}
-        />
-
-        <button type="button" onClick={register}> Create User</button>
-      </div>
-
-      <div>
-        <h3> Login </h3>
-        <input
-          type="text"
-          placeholder="Email..."
-          onChange={(event) => {
-            setLoginEmail(event.target.value);
-          }}
-        />
-        <input
-          type="password"
-          placeholder="Password..."
-          onChange={(event) => {
-            setLoginPassword(event.target.value);
-          }}
-        />
-
-        <button type="button" onClick={login}> Login</button>
-      </div>
-
-      <h4> User Logged In: </h4>
-      {user?.email}
-
-      <button type="button" onClick={logout}> Sign Out </button>
+      <Suspense fallback={loadingMessage}>
+        <Router>
+          <Header user={user} />
+          <Routes>
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/sign_in" element={<LoginUser />} />
+            <Route path="/new" element={<RegisterUser />} />
+          </Routes>
+        </Router>
+      </Suspense>
     </div>
   );
 };

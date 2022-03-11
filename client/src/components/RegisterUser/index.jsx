@@ -31,7 +31,7 @@ export const RegisterUser = function LoginError() {
   return (
     <section className="login-error">
       <div>
-        <h3> Register User </h3>
+        <h3>Register User</h3>
         <input
           type="text"
           placeholder="Email..."

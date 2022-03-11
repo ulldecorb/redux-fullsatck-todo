@@ -30,7 +30,7 @@ export const LoginUser = function Login() {
 
   return (
     <div>
-      <h3> Login </h3>
+      <h3>Sign Up</h3>
       <input
         type="text"
         placeholder="Email..."
