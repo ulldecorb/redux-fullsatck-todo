@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { PropTypes } from 'prop-types';
 import {
   createUserWithEmailAndPassword,
   onAuthStateChanged
@@ -6,7 +7,7 @@ import {
 import auth from '../../firebase-congif';
 import './register.css';
 
-export const RegisterUser = function LoginError() {
+export const RegisterUser = function RegisterUser({ getUser }) {
   const [registerEmail, setRegisterEmail] = useState('');
   const [registerPassword, setRegisterPassword] = useState('');
 
@@ -23,9 +24,9 @@ export const RegisterUser = function LoginError() {
         registerEmail,
         registerPassword
       ));
-      console.log(user);
+      await getUser(user);
     } catch (error) {
-      console.log(error.message);
+      alert(error.message);
     }
   };
 
@@ -52,6 +53,10 @@ export const RegisterUser = function LoginError() {
       </div>
     </section>
   );
+};
+
+RegisterUser.propTypes = {
+  getUser: PropTypes.func.isRequired
 };
 
 export default RegisterUser;

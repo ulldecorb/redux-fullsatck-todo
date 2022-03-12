@@ -12,5 +12,29 @@
         color: red;
     }
 
+    &__margin {
+        height: 15vh;
+        width: 100vw;
+    }
 
+    &__login {
+        position: absolute;
+        right: 0;
+        margin-right: 2vw;
+    }
+
+    &__logout-button {
+        margin-left: 1vw;
+        border-radius: 1vmin;
+        color: white;
+        background-color: grey;
+    }
+
+    &__links {
+        margin-left: 1vw;
+    }
+
+    Link {
+        margin-right: 20px;
+    }
 }
