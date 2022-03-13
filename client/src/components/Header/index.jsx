@@ -1,6 +1,9 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
 import {
+  Link
+} from 'react-router-dom';
+import {
   signOut
 } from 'firebase/auth';
 import auth from '../../firebase-congif';
@@ -11,17 +14,29 @@ export const Header = function Header({ user }) {
     await signOut(auth);
   };
   return (
-    <section className="header">
-      <h1 className="header__title">App</h1>
-      <div className="header__login">
-        <h4> User Logged In: </h4>
-        {user?.mail}
-
-        <button type="button" onClick={logout}> Sign Out </button>
-        user info
-      </div>
-
-    </section>
+    <>
+      <section className="header">
+        <Link to="./">
+          <h1 className="header__title">APP TITLE</h1>
+        </Link>
+        <div className="header__login">
+          {user
+            ? (
+              <>
+                {`Welcome ${user.email}`}
+                <button className="header__logout-button" type="button" onClick={logout}> Sign Out </button>
+              </>
+            )
+            : (
+              <>
+                <Link className="header__links" to="../new">Register</Link>
+                <Link className="header__links" to="../sign_in">Sign Up</Link>
+              </>
+            )}
+        </div>
+      </section>
+      <div className="header__margin" />
+    </>
   );
 };
 

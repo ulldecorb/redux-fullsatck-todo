@@ -7,10 +7,42 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: darkblue;
 
     &__title {
-        color: red;
+        color: orange;
+
+        &:hover {
+            color: white;
+        }
     }
 
+    &__margin {
+        height: 15vh;
+        width: 100vw;
+    }
 
+    &__login {
+        position: absolute;
+        right: 0;
+        margin-right: 2vw;
+        color: white;
+    }
+
+    &__logout-button {
+        margin-left: 1vw;
+        border-radius: 1vmin;
+        color: white;
+        background-color: grey;
+        cursor: pointer;
+    }
+
+    &__links {
+        margin-left: 1vw;
+        color: orange;
+
+        &:hover {
+            color: white;
+        }
+    }
 }

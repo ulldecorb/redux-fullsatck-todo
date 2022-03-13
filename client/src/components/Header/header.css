@@ -13,9 +13,43 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: darkblue;
 }
 
 .header__title {
-  color: red;
+  color: orange;
+}
+
+.header__title:hover {
+  color: white;
+}
+
+.header__margin {
+  height: 15vh;
+  width: 100vw;
+}
+
+.header__login {
+  position: absolute;
+  right: 0;
+  margin-right: 2vw;
+  color: white;
+}
+
+.header__logout-button {
+  margin-left: 1vw;
+  border-radius: 1vmin;
+  color: white;
+  background-color: grey;
+  cursor: pointer;
+}
+
+.header__links {
+  margin-left: 1vw;
+  color: orange;
+}
+
+.header__links:hover {
+  color: white;
 }
 /*# sourceMappingURL=header.css.map */

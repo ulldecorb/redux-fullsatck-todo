@@ -4,6 +4,7 @@ import {
   onAuthStateChanged
 } from 'firebase/auth';
 import auth from '../../firebase-congif';
+import './loginUser.css';
 
 export const LoginUser = function Login() {
   const [loginEmail, setLoginEmail] = useState('');
@@ -29,25 +30,26 @@ export const LoginUser = function Login() {
   };
 
   return (
-    <div>
-      <h3>Sign Up</h3>
-      <input
-        type="text"
-        placeholder="Email..."
-        onChange={(event) => {
-          setLoginEmail(event.target.value);
-        }}
-      />
-      <input
-        type="password"
-        placeholder="Password..."
-        onChange={(event) => {
-          setLoginPassword(event.target.value);
-        }}
-      />
-
-      <button type="button" onClick={login}> Login</button>
-    </div>
+    <section className="login">
+      <div className="login__box">
+        <h3>Sign Up</h3>
+        <input
+          type="text"
+          placeholder="Email..."
+          onChange={(event) => {
+            setLoginEmail(event.target.value);
+          }}
+        />
+        <input
+          type="password"
+          placeholder="Password..."
+          onChange={(event) => {
+            setLoginPassword(event.target.value);
+          }}
+        />
+        <button type="button" onClick={login}> Login</button>
+      </div>
+    </section>
   );
 };
 

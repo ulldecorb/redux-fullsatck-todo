@@ -19,6 +19,13 @@ export const App = function App() {
 
   const loadingMessage = () => 'Code is lava...';
 
+  const getUser = (registerUser) => {
+    setUser(registerUser);
+  };
+
+  // const handleLogin = () => {
+  // }
+
   onAuthStateChanged(auth, (currentUser) => {
     setUser(currentUser);
   });
@@ -29,9 +36,9 @@ export const App = function App() {
         <Router>
           <Header user={user} />
           <Routes>
-            <Route path="/" element={<Dashboard />} />
+            <Route path="/" element={<Dashboard user={user} />} />
             <Route path="/sign_in" element={<LoginUser />} />
-            <Route path="/new" element={<RegisterUser />} />
+            <Route path="/new" element={<RegisterUser getUser={getUser} />} />
           </Routes>
         </Router>
       </Suspense>

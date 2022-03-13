@@ -1,4 +1,4 @@
-.register-user {
+.login {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -14,7 +14,7 @@
           align-items: center;
 }
 
-.register-user__box {
+.login__box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -30,13 +30,13 @@
           align-items: center;
 }
 
-.register-user input {
+.login input {
   margin: 0.5vh 0;
   border-radius: 1vmin;
   width: 200px;
 }
 
-.register-user button {
+.login button {
   border-radius: 1vmin;
   width: 200px;
   background: grey;
@@ -46,7 +46,7 @@
   transition: background-color 1s;
 }
 
-.register-user button:hover {
+.login button:hover {
   background-color: #ade6b6;
 }
-/*# sourceMappingURL=register.css.map */
+/*# sourceMappingURL=loginUser.css.map */
