@@ -32,7 +32,7 @@ export const RegisterUser = function RegisterUser({ getUser }) {
 
   return (
     <section className="register-user">
-      <div>
+      <div className="register-user__box">
         <h3>Register User</h3>
         <input
           type="text"
@@ -48,7 +48,6 @@ export const RegisterUser = function RegisterUser({ getUser }) {
             setRegisterPassword(event.target.value);
           }}
         />
-
         <button type="button" onClick={register}> Create User</button>
       </div>
     </section>

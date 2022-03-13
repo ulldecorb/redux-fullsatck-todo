@@ -3,4 +3,24 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    input {
+        margin: 0.5vh 0;
+        border-radius: 1vmin;
+        width: 200px;
+    }
+
+    button {
+        border-radius: 1vmin;
+        width: 200px;
+        background: grey;
+        color: white;
+    }
 }
