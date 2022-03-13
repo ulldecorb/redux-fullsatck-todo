@@ -41,5 +41,12 @@
   width: 200px;
   background: grey;
   color: white;
+  cursor: pointer;
+  -webkit-transition: background-color 1s;
+  transition: background-color 1s;
+}
+
+.register-user button:hover {
+  background-color: #ade6b6;
 }
 /*# sourceMappingURL=register.css.map */

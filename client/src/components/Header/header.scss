@@ -10,7 +10,11 @@
     background-color: darkblue;
 
     &__title {
-        color: white;
+        color: orange;
+
+        &:hover {
+            color: white;
+        }
     }
 
     &__margin {
@@ -35,9 +39,10 @@
 
     &__links {
         margin-left: 1vw;
-    }
+        color: orange;
 
-    Link {
-        margin-right: 20px;
+        &:hover {
+            color: white;
+        }
     }
 }

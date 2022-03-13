@@ -17,6 +17,10 @@
 }
 
 .header__title {
+  color: orange;
+}
+
+.header__title:hover {
   color: white;
 }
 
@@ -42,9 +46,10 @@
 
 .header__links {
   margin-left: 1vw;
+  color: orange;
 }
 
-.header Link {
-  margin-right: 20px;
+.header__links:hover {
+  color: white;
 }
 /*# sourceMappingURL=header.css.map */

@@ -41,5 +41,12 @@
   width: 200px;
   background: grey;
   color: white;
+  cursor: pointer;
+  -webkit-transition: background-color 1s;
+  transition: background-color 1s;
+}
+
+.login button:hover {
+  background-color: #ade6b6;
 }
 /*# sourceMappingURL=loginUser.css.map */

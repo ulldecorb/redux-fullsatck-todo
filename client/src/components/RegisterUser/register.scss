@@ -22,5 +22,11 @@
         width: 200px;
         background: grey;
         color: white;
+        cursor: pointer;
+        transition: background-color 1s;
+
+        &:hover {
+            background-color: rgb(173, 230, 182);
+        }
     }
 }
