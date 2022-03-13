@@ -16,7 +16,9 @@ export const Header = function Header({ user }) {
   return (
     <>
       <section className="header">
-        <h1 className="header__title">APP TITLE</h1>
+        <Link to="./">
+          <h1 className="header__title">APP TITLE</h1>
+        </Link>
         <div className="header__login">
           {user
             ? (
