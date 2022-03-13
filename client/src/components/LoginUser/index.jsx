@@ -31,7 +31,7 @@ export const LoginUser = function Login() {
 
   return (
     <section className="login">
-      <div>
+      <div className="login__box">
         <h3>Sign Up</h3>
         <input
           type="text"

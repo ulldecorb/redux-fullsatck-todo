@@ -13,10 +13,11 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: darkblue;
 }
 
 .header__title {
-  color: red;
+  color: white;
 }
 
 .header__margin {
@@ -28,6 +29,7 @@
   position: absolute;
   right: 0;
   margin-right: 2vw;
+  color: white;
 }
 
 .header__logout-button {
@@ -35,6 +37,7 @@
   border-radius: 1vmin;
   color: white;
   background-color: grey;
+  cursor: pointer;
 }
 
 .header__links {
