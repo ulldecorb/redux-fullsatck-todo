@@ -13,6 +13,7 @@ import { Header } from './components/Header';
 import { Dashboard } from './components/Dashboard';
 import { LoginUser } from './components/LoginUser';
 import { RegisterUser } from './components/RegisterUser';
+import { Sidebar } from './components/Sidebar';
 
 export const App = function App() {
   const [user, setUser] = useState({});
@@ -35,6 +36,7 @@ export const App = function App() {
       <Suspense fallback={loadingMessage}>
         <Router>
           <Header user={user} />
+          <Sidebar />
           <Routes>
             <Route path="/" element={<Dashboard user={user} />} />
             <Route path="/sign_in" element={<LoginUser />} />

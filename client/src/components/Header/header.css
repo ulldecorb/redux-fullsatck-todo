@@ -31,7 +31,7 @@
 
 .header__login {
   position: absolute;
-  right: 0;
+  right: 4vw;
   margin-right: 2vw;
   color: white;
 }
@@ -51,5 +51,9 @@
 
 .header__links:hover {
   color: white;
+}
+
+.header__links :nth-child(1) {
+  margin-right: 13vw;
 }
 /*# sourceMappingURL=header.css.map */
