@@ -24,7 +24,7 @@
 
     &__login {
         position: absolute;
-        right: 0;
+        right: 4vw;
         margin-right: 2vw;
         color: white;
     }
@@ -43,6 +43,10 @@
 
         &:hover {
             color: white;
+        }
+
+        :nth-child(1){
+            margin-right: 13vw;
         }
     }
 }
