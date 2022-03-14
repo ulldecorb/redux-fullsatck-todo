@@ -20,4 +20,13 @@
         font-size: 2rem;
         cursor: pointer;
     }
+
+    &__open-button{
+        height: 60px;
+        width: 60px;
+        background-color: yellow;
+        position: absolute;
+        right: 13vw;
+        cursor: pointer;
+    }
 }
